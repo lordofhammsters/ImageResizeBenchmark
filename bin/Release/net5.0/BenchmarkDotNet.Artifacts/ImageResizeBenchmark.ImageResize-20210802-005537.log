@@ -1,0 +1,845 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 9 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016
+// command took 1,32s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016
+// command took 12,37s and exited with 1
+// start dotnet build -c Release  --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016
+// command took 2,29s and exited with 0
+// ***** Done, took 00:00:16 (16.14 sec)   *****
+// Found 9 benchmarks:
+//   ImageResize.ResizeNetVipsQuant7: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+//   ImageResize.ResizeNetVipsQ90: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+//   ImageResize.ResizeSystemDrawing: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+//   ImageResize.ResizeNetVipsQuant7: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+//   ImageResize.ResizeNetVipsQ90: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+//   ImageResize.ResizeSystemDrawing: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+//   ImageResize.ResizeNetVipsQuant7: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+//   ImageResize.ResizeNetVipsQ90: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+//   ImageResize.ResizeSystemDrawing: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+
+// **************************
+// Benchmark: ImageResize.ResizeNetVipsQuant7: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d6361c7f-f8af-44ff-a7c1-87e27e4c7016.dll" --benchmarkName "ImageResizeBenchmark.ImageResize.ResizeNetVipsQuant7(fileNameIn: "C:\Work\jpgIn.jpg", fileNameOut: "C:\Work\jpgOut.jpg", width: 300, height: 300)" --job "Default" --benchmarkId 0 in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 319600.00 ns, 319.6000 us/op
+WorkloadJitting  1: 1 op, 455057500.00 ns, 455.0575 ms/op
+
+WorkloadWarmup   1: 1 op, 36576500.00 ns, 36.5765 ms/op
+WorkloadWarmup   2: 1 op, 36469000.00 ns, 36.4690 ms/op
+WorkloadWarmup   3: 1 op, 36211600.00 ns, 36.2116 ms/op
+WorkloadWarmup   4: 1 op, 36212000.00 ns, 36.2120 ms/op
+WorkloadWarmup   5: 1 op, 36717800.00 ns, 36.7178 ms/op
+WorkloadWarmup   6: 1 op, 35701800.00 ns, 35.7018 ms/op
+WorkloadWarmup   7: 1 op, 36069500.00 ns, 36.0695 ms/op
+WorkloadWarmup   8: 1 op, 36776600.00 ns, 36.7766 ms/op
+WorkloadWarmup   9: 1 op, 38412600.00 ns, 38.4126 ms/op
+WorkloadWarmup  10: 1 op, 38079400.00 ns, 38.0794 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 36681900.00 ns, 36.6819 ms/op
+WorkloadActual   2: 1 op, 37832500.00 ns, 37.8325 ms/op
+WorkloadActual   3: 1 op, 37860800.00 ns, 37.8608 ms/op
+WorkloadActual   4: 1 op, 37013000.00 ns, 37.0130 ms/op
+WorkloadActual   5: 1 op, 36078400.00 ns, 36.0784 ms/op
+WorkloadActual   6: 1 op, 37271100.00 ns, 37.2711 ms/op
+WorkloadActual   7: 1 op, 37870600.00 ns, 37.8706 ms/op
+WorkloadActual   8: 1 op, 38827800.00 ns, 38.8278 ms/op
+WorkloadActual   9: 1 op, 38325200.00 ns, 38.3252 ms/op
+WorkloadActual  10: 1 op, 38156600.00 ns, 38.1566 ms/op
+WorkloadActual  11: 1 op, 38608500.00 ns, 38.6085 ms/op
+WorkloadActual  12: 1 op, 37574800.00 ns, 37.5748 ms/op
+WorkloadActual  13: 1 op, 37454500.00 ns, 37.4545 ms/op
+WorkloadActual  14: 1 op, 37561600.00 ns, 37.5616 ms/op
+WorkloadActual  15: 1 op, 38584700.00 ns, 38.5847 ms/op
+WorkloadActual  16: 1 op, 37427700.00 ns, 37.4277 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 36681900.00 ns, 36.6819 ms/op
+WorkloadResult   2: 1 op, 37832500.00 ns, 37.8325 ms/op
+WorkloadResult   3: 1 op, 37860800.00 ns, 37.8608 ms/op
+WorkloadResult   4: 1 op, 37013000.00 ns, 37.0130 ms/op
+WorkloadResult   5: 1 op, 36078400.00 ns, 36.0784 ms/op
+WorkloadResult   6: 1 op, 37271100.00 ns, 37.2711 ms/op
+WorkloadResult   7: 1 op, 37870600.00 ns, 37.8706 ms/op
+WorkloadResult   8: 1 op, 38827800.00 ns, 38.8278 ms/op
+WorkloadResult   9: 1 op, 38325200.00 ns, 38.3252 ms/op
+WorkloadResult  10: 1 op, 38156600.00 ns, 38.1566 ms/op
+WorkloadResult  11: 1 op, 38608500.00 ns, 38.6085 ms/op
+WorkloadResult  12: 1 op, 37574800.00 ns, 37.5748 ms/op
+WorkloadResult  13: 1 op, 37454500.00 ns, 37.4545 ms/op
+WorkloadResult  14: 1 op, 37561600.00 ns, 37.5616 ms/op
+WorkloadResult  15: 1 op, 38584700.00 ns, 38.5847 ms/op
+WorkloadResult  16: 1 op, 37427700.00 ns, 37.4277 ms/op
+
+// AfterAll
+// Benchmark Process 19648 has exited with code 0
+
+Mean = 37.696 ms, StdErr = 0.183 ms (0.49%), N = 16, StdDev = 0.732 ms
+Min = 36.078 ms, Q1 = 37.389 ms, Median = 37.704 ms, Q3 = 38.199 ms, Max = 38.828 ms
+IQR = 0.810 ms, LowerFence = 36.173 ms, UpperFence = 39.414 ms
+ConfidenceInterval = [36.950 ms; 38.441 ms] (CI 99.9%), Margin = 0.746 ms (1.98% of Mean)
+Skewness = -0.39, Kurtosis = 2.46, MValue = 2
+
+// **************************
+// Benchmark: ImageResize.ResizeNetVipsQ90: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d6361c7f-f8af-44ff-a7c1-87e27e4c7016.dll" --benchmarkName "ImageResizeBenchmark.ImageResize.ResizeNetVipsQ90(fileNameIn: "C:\Work\jpgIn.jpg", fileNameOut: "C:\Work\jpgOut.jpg", width: 300, height: 300)" --job "Default" --benchmarkId 1 in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 328000.00 ns, 328.0000 us/op
+WorkloadJitting  1: 1 op, 90882700.00 ns, 90.8827 ms/op
+
+WorkloadPilot    1: 2 op, 77432700.00 ns, 38.7163 ms/op
+WorkloadPilot    2: 3 op, 118015900.00 ns, 39.3386 ms/op
+WorkloadPilot    3: 4 op, 162153600.00 ns, 40.5384 ms/op
+WorkloadPilot    4: 5 op, 201186400.00 ns, 40.2373 ms/op
+WorkloadPilot    5: 6 op, 247066400.00 ns, 41.1777 ms/op
+WorkloadPilot    6: 7 op, 284736000.00 ns, 40.6766 ms/op
+WorkloadPilot    7: 8 op, 341044200.00 ns, 42.6305 ms/op
+WorkloadPilot    8: 9 op, 368883000.00 ns, 40.9870 ms/op
+WorkloadPilot    9: 10 op, 397111800.00 ns, 39.7112 ms/op
+WorkloadPilot   10: 11 op, 429908800.00 ns, 39.0826 ms/op
+WorkloadPilot   11: 12 op, 451570800.00 ns, 37.6309 ms/op
+WorkloadPilot   12: 13 op, 494045500.00 ns, 38.0035 ms/op
+WorkloadPilot   13: 14 op, 530850900.00 ns, 37.9179 ms/op
+
+WorkloadWarmup   1: 14 op, 541164600.00 ns, 38.6546 ms/op
+WorkloadWarmup   2: 14 op, 527083500.00 ns, 37.6488 ms/op
+WorkloadWarmup   3: 14 op, 528027400.00 ns, 37.7162 ms/op
+WorkloadWarmup   4: 14 op, 518139300.00 ns, 37.0099 ms/op
+WorkloadWarmup   5: 14 op, 525430900.00 ns, 37.5308 ms/op
+WorkloadWarmup   6: 14 op, 518770800.00 ns, 37.0551 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 14 op, 522667600.00 ns, 37.3334 ms/op
+WorkloadActual   2: 14 op, 525286800.00 ns, 37.5205 ms/op
+WorkloadActual   3: 14 op, 539042100.00 ns, 38.5030 ms/op
+WorkloadActual   4: 14 op, 523412900.00 ns, 37.3866 ms/op
+WorkloadActual   5: 14 op, 539213600.00 ns, 38.5153 ms/op
+WorkloadActual   6: 14 op, 521359000.00 ns, 37.2399 ms/op
+WorkloadActual   7: 14 op, 521751200.00 ns, 37.2679 ms/op
+WorkloadActual   8: 14 op, 530671700.00 ns, 37.9051 ms/op
+WorkloadActual   9: 14 op, 524539600.00 ns, 37.4671 ms/op
+WorkloadActual  10: 14 op, 517545900.00 ns, 36.9676 ms/op
+WorkloadActual  11: 14 op, 531146900.00 ns, 37.9391 ms/op
+WorkloadActual  12: 14 op, 564037300.00 ns, 40.2884 ms/op
+WorkloadActual  13: 14 op, 526685400.00 ns, 37.6204 ms/op
+WorkloadActual  14: 14 op, 520496700.00 ns, 37.1783 ms/op
+WorkloadActual  15: 14 op, 529026200.00 ns, 37.7876 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 14 op, 522667600.00 ns, 37.3334 ms/op
+WorkloadResult   2: 14 op, 525286800.00 ns, 37.5205 ms/op
+WorkloadResult   3: 14 op, 539042100.00 ns, 38.5030 ms/op
+WorkloadResult   4: 14 op, 523412900.00 ns, 37.3866 ms/op
+WorkloadResult   5: 14 op, 539213600.00 ns, 38.5153 ms/op
+WorkloadResult   6: 14 op, 521359000.00 ns, 37.2399 ms/op
+WorkloadResult   7: 14 op, 521751200.00 ns, 37.2679 ms/op
+WorkloadResult   8: 14 op, 530671700.00 ns, 37.9051 ms/op
+WorkloadResult   9: 14 op, 524539600.00 ns, 37.4671 ms/op
+WorkloadResult  10: 14 op, 517545900.00 ns, 36.9676 ms/op
+WorkloadResult  11: 14 op, 531146900.00 ns, 37.9391 ms/op
+WorkloadResult  12: 14 op, 526685400.00 ns, 37.6204 ms/op
+WorkloadResult  13: 14 op, 520496700.00 ns, 37.1783 ms/op
+WorkloadResult  14: 14 op, 529026200.00 ns, 37.7876 ms/op
+
+// AfterAll
+// Benchmark Process 16984 has exited with code 0
+
+Mean = 37.617 ms, StdErr = 0.125 ms (0.33%), N = 14, StdDev = 0.468 ms
+Min = 36.968 ms, Q1 = 37.284 ms, Median = 37.494 ms, Q3 = 37.876 ms, Max = 38.515 ms
+IQR = 0.591 ms, LowerFence = 36.397 ms, UpperFence = 38.763 ms
+ConfidenceInterval = [37.088 ms; 38.145 ms] (CI 99.9%), Margin = 0.528 ms (1.40% of Mean)
+Skewness = 0.69, Kurtosis = 2.3, MValue = 2
+
+// **************************
+// Benchmark: ImageResize.ResizeSystemDrawing: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d6361c7f-f8af-44ff-a7c1-87e27e4c7016.dll" --benchmarkName "ImageResizeBenchmark.ImageResize.ResizeSystemDrawing(fileNameIn: "C:\Work\jpgIn.jpg", fileNameOut: "C:\Work\jpgOut.jpg", width: 300, height: 300)" --job "Default" --benchmarkId 2 in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 483600.00 ns, 483.6000 us/op
+WorkloadJitting  1: 1 op, 86353100.00 ns, 86.3531 ms/op
+
+WorkloadPilot    1: 2 op, 110311500.00 ns, 55.1557 ms/op
+WorkloadPilot    2: 3 op, 165560400.00 ns, 55.1868 ms/op
+WorkloadPilot    3: 4 op, 219264900.00 ns, 54.8162 ms/op
+WorkloadPilot    4: 5 op, 280714000.00 ns, 56.1428 ms/op
+WorkloadPilot    5: 6 op, 332589100.00 ns, 55.4315 ms/op
+WorkloadPilot    6: 7 op, 396894800.00 ns, 56.6993 ms/op
+WorkloadPilot    7: 8 op, 466387500.00 ns, 58.2984 ms/op
+WorkloadPilot    8: 9 op, 511460500.00 ns, 56.8289 ms/op
+
+WorkloadWarmup   1: 9 op, 534748900.00 ns, 59.4165 ms/op
+WorkloadWarmup   2: 9 op, 527783600.00 ns, 58.6426 ms/op
+WorkloadWarmup   3: 9 op, 511984500.00 ns, 56.8872 ms/op
+WorkloadWarmup   4: 9 op, 519030500.00 ns, 57.6701 ms/op
+WorkloadWarmup   5: 9 op, 528281900.00 ns, 58.6980 ms/op
+WorkloadWarmup   6: 9 op, 518805300.00 ns, 57.6450 ms/op
+WorkloadWarmup   7: 9 op, 515589300.00 ns, 57.2877 ms/op
+WorkloadWarmup   8: 9 op, 506133300.00 ns, 56.2370 ms/op
+WorkloadWarmup   9: 9 op, 497073100.00 ns, 55.2303 ms/op
+WorkloadWarmup  10: 9 op, 496258900.00 ns, 55.1399 ms/op
+WorkloadWarmup  11: 9 op, 504189600.00 ns, 56.0211 ms/op
+WorkloadWarmup  12: 9 op, 491060900.00 ns, 54.5623 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 9 op, 504277600.00 ns, 56.0308 ms/op
+WorkloadActual   2: 9 op, 493236000.00 ns, 54.8040 ms/op
+WorkloadActual   3: 9 op, 491055500.00 ns, 54.5617 ms/op
+WorkloadActual   4: 9 op, 487223700.00 ns, 54.1360 ms/op
+WorkloadActual   5: 9 op, 501050900.00 ns, 55.6723 ms/op
+WorkloadActual   6: 9 op, 501862300.00 ns, 55.7625 ms/op
+WorkloadActual   7: 9 op, 493331000.00 ns, 54.8146 ms/op
+WorkloadActual   8: 9 op, 507368200.00 ns, 56.3742 ms/op
+WorkloadActual   9: 9 op, 487930000.00 ns, 54.2144 ms/op
+WorkloadActual  10: 9 op, 488286900.00 ns, 54.2541 ms/op
+WorkloadActual  11: 9 op, 502651300.00 ns, 55.8501 ms/op
+WorkloadActual  12: 9 op, 505951600.00 ns, 56.2168 ms/op
+WorkloadActual  13: 9 op, 498570900.00 ns, 55.3968 ms/op
+WorkloadActual  14: 9 op, 500100800.00 ns, 55.5668 ms/op
+WorkloadActual  15: 9 op, 503598400.00 ns, 55.9554 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 9 op, 504277600.00 ns, 56.0308 ms/op
+WorkloadResult   2: 9 op, 493236000.00 ns, 54.8040 ms/op
+WorkloadResult   3: 9 op, 491055500.00 ns, 54.5617 ms/op
+WorkloadResult   4: 9 op, 487223700.00 ns, 54.1360 ms/op
+WorkloadResult   5: 9 op, 501050900.00 ns, 55.6723 ms/op
+WorkloadResult   6: 9 op, 501862300.00 ns, 55.7625 ms/op
+WorkloadResult   7: 9 op, 493331000.00 ns, 54.8146 ms/op
+WorkloadResult   8: 9 op, 507368200.00 ns, 56.3742 ms/op
+WorkloadResult   9: 9 op, 487930000.00 ns, 54.2144 ms/op
+WorkloadResult  10: 9 op, 488286900.00 ns, 54.2541 ms/op
+WorkloadResult  11: 9 op, 502651300.00 ns, 55.8501 ms/op
+WorkloadResult  12: 9 op, 505951600.00 ns, 56.2168 ms/op
+WorkloadResult  13: 9 op, 498570900.00 ns, 55.3968 ms/op
+WorkloadResult  14: 9 op, 500100800.00 ns, 55.5668 ms/op
+WorkloadResult  15: 9 op, 503598400.00 ns, 55.9554 ms/op
+
+// AfterAll
+// Benchmark Process 11888 has exited with code 0
+
+Mean = 55.307 ms, StdErr = 0.199 ms (0.36%), N = 15, StdDev = 0.772 ms
+Min = 54.136 ms, Q1 = 54.683 ms, Median = 55.567 ms, Q3 = 55.903 ms, Max = 56.374 ms
+IQR = 1.220 ms, LowerFence = 52.853 ms, UpperFence = 57.733 ms
+ConfidenceInterval = [54.482 ms; 56.133 ms] (CI 99.9%), Margin = 0.825 ms (1.49% of Mean)
+Skewness = -0.26, Kurtosis = 1.42, MValue = 2
+
+// **************************
+// Benchmark: ImageResize.ResizeNetVipsQuant7: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d6361c7f-f8af-44ff-a7c1-87e27e4c7016.dll" --benchmarkName "ImageResizeBenchmark.ImageResize.ResizeNetVipsQuant7(fileNameIn: "C:\Work\jpgIn.jpg", fileNameOut: "C:\Work\jpgOut.jpg", width: 700, height: 700)" --job "Default" --benchmarkId 3 in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 327300.00 ns, 327.3000 us/op
+WorkloadJitting  1: 1 op, 115034400.00 ns, 115.0344 ms/op
+
+WorkloadPilot    1: 2 op, 158464300.00 ns, 79.2322 ms/op
+WorkloadPilot    2: 3 op, 241855200.00 ns, 80.6184 ms/op
+WorkloadPilot    3: 4 op, 320707000.00 ns, 80.1767 ms/op
+WorkloadPilot    4: 5 op, 396211500.00 ns, 79.2423 ms/op
+WorkloadPilot    5: 6 op, 477956800.00 ns, 79.6595 ms/op
+WorkloadPilot    6: 7 op, 557291700.00 ns, 79.6131 ms/op
+
+WorkloadWarmup   1: 7 op, 561248000.00 ns, 80.1783 ms/op
+WorkloadWarmup   2: 7 op, 560892400.00 ns, 80.1275 ms/op
+WorkloadWarmup   3: 7 op, 574352200.00 ns, 82.0503 ms/op
+WorkloadWarmup   4: 7 op, 559448800.00 ns, 79.9213 ms/op
+WorkloadWarmup   5: 7 op, 528899200.00 ns, 75.5570 ms/op
+WorkloadWarmup   6: 7 op, 528482900.00 ns, 75.4976 ms/op
+WorkloadWarmup   7: 7 op, 515455200.00 ns, 73.6365 ms/op
+WorkloadWarmup   8: 7 op, 542369400.00 ns, 77.4813 ms/op
+WorkloadWarmup   9: 7 op, 515838700.00 ns, 73.6912 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 7 op, 514768700.00 ns, 73.5384 ms/op
+WorkloadActual   2: 7 op, 524112500.00 ns, 74.8732 ms/op
+WorkloadActual   3: 7 op, 514475800.00 ns, 73.4965 ms/op
+WorkloadActual   4: 7 op, 530379600.00 ns, 75.7685 ms/op
+WorkloadActual   5: 7 op, 515708900.00 ns, 73.6727 ms/op
+WorkloadActual   6: 7 op, 515146700.00 ns, 73.5924 ms/op
+WorkloadActual   7: 7 op, 527116600.00 ns, 75.3024 ms/op
+WorkloadActual   8: 7 op, 527647700.00 ns, 75.3782 ms/op
+WorkloadActual   9: 7 op, 514110500.00 ns, 73.4444 ms/op
+WorkloadActual  10: 7 op, 515376000.00 ns, 73.6251 ms/op
+WorkloadActual  11: 7 op, 512995500.00 ns, 73.2851 ms/op
+WorkloadActual  12: 7 op, 516920200.00 ns, 73.8457 ms/op
+WorkloadActual  13: 7 op, 514800700.00 ns, 73.5430 ms/op
+WorkloadActual  14: 7 op, 514166000.00 ns, 73.4523 ms/op
+WorkloadActual  15: 7 op, 517159300.00 ns, 73.8799 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 7 op, 514768700.00 ns, 73.5384 ms/op
+WorkloadResult   2: 7 op, 524112500.00 ns, 74.8732 ms/op
+WorkloadResult   3: 7 op, 514475800.00 ns, 73.4965 ms/op
+WorkloadResult   4: 7 op, 515708900.00 ns, 73.6727 ms/op
+WorkloadResult   5: 7 op, 515146700.00 ns, 73.5924 ms/op
+WorkloadResult   6: 7 op, 527116600.00 ns, 75.3024 ms/op
+WorkloadResult   7: 7 op, 527647700.00 ns, 75.3782 ms/op
+WorkloadResult   8: 7 op, 514110500.00 ns, 73.4444 ms/op
+WorkloadResult   9: 7 op, 515376000.00 ns, 73.6251 ms/op
+WorkloadResult  10: 7 op, 512995500.00 ns, 73.2851 ms/op
+WorkloadResult  11: 7 op, 516920200.00 ns, 73.8457 ms/op
+WorkloadResult  12: 7 op, 514800700.00 ns, 73.5430 ms/op
+WorkloadResult  13: 7 op, 514166000.00 ns, 73.4523 ms/op
+WorkloadResult  14: 7 op, 517159300.00 ns, 73.8799 ms/op
+
+// AfterAll
+// Benchmark Process 16348 has exited with code 0
+
+Mean = 73.924 ms, StdErr = 0.189 ms (0.26%), N = 14, StdDev = 0.708 ms
+Min = 73.285 ms, Q1 = 73.507 ms, Median = 73.609 ms, Q3 = 73.871 ms, Max = 75.378 ms
+IQR = 0.364 ms, LowerFence = 72.960 ms, UpperFence = 74.418 ms
+ConfidenceInterval = [73.124 ms; 74.723 ms] (CI 99.9%), Margin = 0.799 ms (1.08% of Mean)
+Skewness = 1.17, Kurtosis = 2.63, MValue = 2
+
+// **************************
+// Benchmark: ImageResize.ResizeNetVipsQ90: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d6361c7f-f8af-44ff-a7c1-87e27e4c7016.dll" --benchmarkName "ImageResizeBenchmark.ImageResize.ResizeNetVipsQ90(fileNameIn: "C:\Work\jpgIn.jpg", fileNameOut: "C:\Work\jpgOut.jpg", width: 700, height: 700)" --job "Default" --benchmarkId 4 in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 318300.00 ns, 318.3000 us/op
+WorkloadJitting  1: 1 op, 138531000.00 ns, 138.5310 ms/op
+
+WorkloadPilot    1: 2 op, 201806600.00 ns, 100.9033 ms/op
+WorkloadPilot    2: 3 op, 301783400.00 ns, 100.5945 ms/op
+WorkloadPilot    3: 4 op, 394827500.00 ns, 98.7069 ms/op
+WorkloadPilot    4: 5 op, 508755300.00 ns, 101.7511 ms/op
+
+WorkloadWarmup   1: 5 op, 510368200.00 ns, 102.0736 ms/op
+WorkloadWarmup   2: 5 op, 512089000.00 ns, 102.4178 ms/op
+WorkloadWarmup   3: 5 op, 508597000.00 ns, 101.7194 ms/op
+WorkloadWarmup   4: 5 op, 508763000.00 ns, 101.7526 ms/op
+WorkloadWarmup   5: 5 op, 508371200.00 ns, 101.6742 ms/op
+WorkloadWarmup   6: 5 op, 507526500.00 ns, 101.5053 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 504888800.00 ns, 100.9778 ms/op
+WorkloadActual   2: 5 op, 495836400.00 ns, 99.1673 ms/op
+WorkloadActual   3: 5 op, 488192400.00 ns, 97.6385 ms/op
+WorkloadActual   4: 5 op, 484001700.00 ns, 96.8003 ms/op
+WorkloadActual   5: 5 op, 488302800.00 ns, 97.6606 ms/op
+WorkloadActual   6: 5 op, 494921800.00 ns, 98.9844 ms/op
+WorkloadActual   7: 5 op, 489661100.00 ns, 97.9322 ms/op
+WorkloadActual   8: 5 op, 473056500.00 ns, 94.6113 ms/op
+WorkloadActual   9: 5 op, 481566800.00 ns, 96.3134 ms/op
+WorkloadActual  10: 5 op, 475552300.00 ns, 95.1105 ms/op
+WorkloadActual  11: 5 op, 473054900.00 ns, 94.6110 ms/op
+WorkloadActual  12: 5 op, 474998700.00 ns, 94.9997 ms/op
+WorkloadActual  13: 5 op, 488217200.00 ns, 97.6434 ms/op
+WorkloadActual  14: 5 op, 474941200.00 ns, 94.9882 ms/op
+WorkloadActual  15: 5 op, 473762000.00 ns, 94.7524 ms/op
+WorkloadActual  16: 5 op, 486128500.00 ns, 97.2257 ms/op
+WorkloadActual  17: 5 op, 474065700.00 ns, 94.8131 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 504888800.00 ns, 100.9778 ms/op
+WorkloadResult   2: 5 op, 495836400.00 ns, 99.1673 ms/op
+WorkloadResult   3: 5 op, 488192400.00 ns, 97.6385 ms/op
+WorkloadResult   4: 5 op, 484001700.00 ns, 96.8003 ms/op
+WorkloadResult   5: 5 op, 488302800.00 ns, 97.6606 ms/op
+WorkloadResult   6: 5 op, 494921800.00 ns, 98.9844 ms/op
+WorkloadResult   7: 5 op, 489661100.00 ns, 97.9322 ms/op
+WorkloadResult   8: 5 op, 473056500.00 ns, 94.6113 ms/op
+WorkloadResult   9: 5 op, 481566800.00 ns, 96.3134 ms/op
+WorkloadResult  10: 5 op, 475552300.00 ns, 95.1105 ms/op
+WorkloadResult  11: 5 op, 473054900.00 ns, 94.6110 ms/op
+WorkloadResult  12: 5 op, 474998700.00 ns, 94.9997 ms/op
+WorkloadResult  13: 5 op, 488217200.00 ns, 97.6434 ms/op
+WorkloadResult  14: 5 op, 474941200.00 ns, 94.9882 ms/op
+WorkloadResult  15: 5 op, 473762000.00 ns, 94.7524 ms/op
+WorkloadResult  16: 5 op, 486128500.00 ns, 97.2257 ms/op
+WorkloadResult  17: 5 op, 474065700.00 ns, 94.8131 ms/op
+
+// AfterAll
+// Benchmark Process 12496 has exited with code 0
+
+Mean = 96.719 ms, StdErr = 0.464 ms (0.48%), N = 17, StdDev = 1.915 ms
+Min = 94.611 ms, Q1 = 94.988 ms, Median = 96.800 ms, Q3 = 97.661 ms, Max = 100.978 ms
+IQR = 2.672 ms, LowerFence = 90.980 ms, UpperFence = 101.669 ms
+ConfidenceInterval = [94.855 ms; 98.584 ms] (CI 99.9%), Margin = 1.865 ms (1.93% of Mean)
+Skewness = 0.5, Kurtosis = 2.13, MValue = 2
+
+// **************************
+// Benchmark: ImageResize.ResizeSystemDrawing: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d6361c7f-f8af-44ff-a7c1-87e27e4c7016.dll" --benchmarkName "ImageResizeBenchmark.ImageResize.ResizeSystemDrawing(fileNameIn: "C:\Work\jpgIn.jpg", fileNameOut: "C:\Work\jpgOut.jpg", width: 700, height: 700)" --job "Default" --benchmarkId 5 in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 302900.00 ns, 302.9000 us/op
+WorkloadJitting  1: 1 op, 109495700.00 ns, 109.4957 ms/op
+
+WorkloadPilot    1: 2 op, 168994200.00 ns, 84.4971 ms/op
+WorkloadPilot    2: 3 op, 255026500.00 ns, 85.0088 ms/op
+WorkloadPilot    3: 4 op, 336047600.00 ns, 84.0119 ms/op
+WorkloadPilot    4: 5 op, 422839600.00 ns, 84.5679 ms/op
+WorkloadPilot    5: 6 op, 505813400.00 ns, 84.3022 ms/op
+
+WorkloadWarmup   1: 6 op, 517432700.00 ns, 86.2388 ms/op
+WorkloadWarmup   2: 6 op, 501898000.00 ns, 83.6497 ms/op
+WorkloadWarmup   3: 6 op, 502423500.00 ns, 83.7373 ms/op
+WorkloadWarmup   4: 6 op, 500946900.00 ns, 83.4912 ms/op
+WorkloadWarmup   5: 6 op, 505783700.00 ns, 84.2973 ms/op
+WorkloadWarmup   6: 6 op, 504979500.00 ns, 84.1633 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 6 op, 504219800.00 ns, 84.0366 ms/op
+WorkloadActual   2: 6 op, 500566800.00 ns, 83.4278 ms/op
+WorkloadActual   3: 6 op, 504360200.00 ns, 84.0600 ms/op
+WorkloadActual   4: 6 op, 500933100.00 ns, 83.4888 ms/op
+WorkloadActual   5: 6 op, 505815400.00 ns, 84.3026 ms/op
+WorkloadActual   6: 6 op, 500732600.00 ns, 83.4554 ms/op
+WorkloadActual   7: 6 op, 512261600.00 ns, 85.3769 ms/op
+WorkloadActual   8: 6 op, 508308300.00 ns, 84.7181 ms/op
+WorkloadActual   9: 6 op, 502631700.00 ns, 83.7720 ms/op
+WorkloadActual  10: 6 op, 499567300.00 ns, 83.2612 ms/op
+WorkloadActual  11: 6 op, 520046800.00 ns, 86.6745 ms/op
+WorkloadActual  12: 6 op, 506574800.00 ns, 84.4291 ms/op
+WorkloadActual  13: 6 op, 523046700.00 ns, 87.1744 ms/op
+WorkloadActual  14: 6 op, 508295100.00 ns, 84.7159 ms/op
+WorkloadActual  15: 6 op, 513816600.00 ns, 85.6361 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 6 op, 504219800.00 ns, 84.0366 ms/op
+WorkloadResult   2: 6 op, 500566800.00 ns, 83.4278 ms/op
+WorkloadResult   3: 6 op, 504360200.00 ns, 84.0600 ms/op
+WorkloadResult   4: 6 op, 500933100.00 ns, 83.4888 ms/op
+WorkloadResult   5: 6 op, 505815400.00 ns, 84.3026 ms/op
+WorkloadResult   6: 6 op, 500732600.00 ns, 83.4554 ms/op
+WorkloadResult   7: 6 op, 512261600.00 ns, 85.3769 ms/op
+WorkloadResult   8: 6 op, 508308300.00 ns, 84.7181 ms/op
+WorkloadResult   9: 6 op, 502631700.00 ns, 83.7720 ms/op
+WorkloadResult  10: 6 op, 499567300.00 ns, 83.2612 ms/op
+WorkloadResult  11: 6 op, 520046800.00 ns, 86.6745 ms/op
+WorkloadResult  12: 6 op, 506574800.00 ns, 84.4291 ms/op
+WorkloadResult  13: 6 op, 508295100.00 ns, 84.7159 ms/op
+WorkloadResult  14: 6 op, 513816600.00 ns, 85.6361 ms/op
+
+// AfterAll
+// Benchmark Process 18344 has exited with code 0
+
+Mean = 84.383 ms, StdErr = 0.262 ms (0.31%), N = 14, StdDev = 0.979 ms
+Min = 83.261 ms, Q1 = 83.560 ms, Median = 84.181 ms, Q3 = 84.718 ms, Max = 86.674 ms
+IQR = 1.158 ms, LowerFence = 81.823 ms, UpperFence = 86.454 ms
+ConfidenceInterval = [83.278 ms; 85.487 ms] (CI 99.9%), Margin = 1.105 ms (1.31% of Mean)
+Skewness = 0.83, Kurtosis = 2.72, MValue = 2
+
+// **************************
+// Benchmark: ImageResize.ResizeNetVipsQuant7: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d6361c7f-f8af-44ff-a7c1-87e27e4c7016.dll" --benchmarkName "ImageResizeBenchmark.ImageResize.ResizeNetVipsQuant7(fileNameIn: "C:\Work\jpgIn.jpg", fileNameOut: "C:\Work\jpgOut.jpg", width: 1000, height: 1000)" --job "Default" --benchmarkId 6 in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 299900.00 ns, 299.9000 us/op
+WorkloadJitting  1: 1 op, 148771200.00 ns, 148.7712 ms/op
+
+WorkloadPilot    1: 2 op, 224573300.00 ns, 112.2866 ms/op
+WorkloadPilot    2: 3 op, 334336400.00 ns, 111.4455 ms/op
+WorkloadPilot    3: 4 op, 450003800.00 ns, 112.5010 ms/op
+WorkloadPilot    4: 5 op, 569923500.00 ns, 113.9847 ms/op
+
+WorkloadWarmup   1: 5 op, 566786300.00 ns, 113.3573 ms/op
+WorkloadWarmup   2: 5 op, 573443300.00 ns, 114.6887 ms/op
+WorkloadWarmup   3: 5 op, 566238700.00 ns, 113.2477 ms/op
+WorkloadWarmup   4: 5 op, 565842100.00 ns, 113.1684 ms/op
+WorkloadWarmup   5: 5 op, 569542200.00 ns, 113.9084 ms/op
+WorkloadWarmup   6: 5 op, 561906500.00 ns, 112.3813 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 570688100.00 ns, 114.1376 ms/op
+WorkloadActual   2: 5 op, 580046900.00 ns, 116.0094 ms/op
+WorkloadActual   3: 5 op, 574941000.00 ns, 114.9882 ms/op
+WorkloadActual   4: 5 op, 556584200.00 ns, 111.3168 ms/op
+WorkloadActual   5: 5 op, 555392100.00 ns, 111.0784 ms/op
+WorkloadActual   6: 5 op, 544004600.00 ns, 108.8009 ms/op
+WorkloadActual   7: 5 op, 557314200.00 ns, 111.4628 ms/op
+WorkloadActual   8: 5 op, 573492300.00 ns, 114.6985 ms/op
+WorkloadActual   9: 5 op, 544953100.00 ns, 108.9906 ms/op
+WorkloadActual  10: 5 op, 544185800.00 ns, 108.8372 ms/op
+WorkloadActual  11: 5 op, 553827300.00 ns, 110.7655 ms/op
+WorkloadActual  12: 5 op, 544564100.00 ns, 108.9128 ms/op
+WorkloadActual  13: 5 op, 543768800.00 ns, 108.7538 ms/op
+WorkloadActual  14: 5 op, 548114300.00 ns, 109.6229 ms/op
+WorkloadActual  15: 5 op, 546183600.00 ns, 109.2367 ms/op
+WorkloadActual  16: 5 op, 558856800.00 ns, 111.7714 ms/op
+WorkloadActual  17: 5 op, 546181500.00 ns, 109.2363 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 570688100.00 ns, 114.1376 ms/op
+WorkloadResult   2: 5 op, 574941000.00 ns, 114.9882 ms/op
+WorkloadResult   3: 5 op, 556584200.00 ns, 111.3168 ms/op
+WorkloadResult   4: 5 op, 555392100.00 ns, 111.0784 ms/op
+WorkloadResult   5: 5 op, 544004600.00 ns, 108.8009 ms/op
+WorkloadResult   6: 5 op, 557314200.00 ns, 111.4628 ms/op
+WorkloadResult   7: 5 op, 573492300.00 ns, 114.6985 ms/op
+WorkloadResult   8: 5 op, 544953100.00 ns, 108.9906 ms/op
+WorkloadResult   9: 5 op, 544185800.00 ns, 108.8372 ms/op
+WorkloadResult  10: 5 op, 553827300.00 ns, 110.7655 ms/op
+WorkloadResult  11: 5 op, 544564100.00 ns, 108.9128 ms/op
+WorkloadResult  12: 5 op, 543768800.00 ns, 108.7538 ms/op
+WorkloadResult  13: 5 op, 548114300.00 ns, 109.6229 ms/op
+WorkloadResult  14: 5 op, 546183600.00 ns, 109.2367 ms/op
+WorkloadResult  15: 5 op, 558856800.00 ns, 111.7714 ms/op
+WorkloadResult  16: 5 op, 546181500.00 ns, 109.2363 ms/op
+
+// AfterAll
+// Benchmark Process 15004 has exited with code 0
+
+Mean = 110.788 ms, StdErr = 0.543 ms (0.49%), N = 16, StdDev = 2.172 ms
+Min = 108.754 ms, Q1 = 108.971 ms, Median = 110.194 ms, Q3 = 111.540 ms, Max = 114.988 ms
+IQR = 2.569 ms, LowerFence = 105.118 ms, UpperFence = 115.393 ms
+ConfidenceInterval = [108.577 ms; 112.999 ms] (CI 99.9%), Margin = 2.211 ms (2.00% of Mean)
+Skewness = 0.78, Kurtosis = 2.12, MValue = 2
+
+// **************************
+// Benchmark: ImageResize.ResizeNetVipsQ90: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d6361c7f-f8af-44ff-a7c1-87e27e4c7016.dll" --benchmarkName "ImageResizeBenchmark.ImageResize.ResizeNetVipsQ90(fileNameIn: "C:\Work\jpgIn.jpg", fileNameOut: "C:\Work\jpgOut.jpg", width: 1000, height: 1000)" --job "Default" --benchmarkId 7 in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 368700.00 ns, 368.7000 us/op
+WorkloadJitting  1: 1 op, 188485500.00 ns, 188.4855 ms/op
+
+WorkloadPilot    1: 2 op, 301995400.00 ns, 150.9977 ms/op
+WorkloadPilot    2: 3 op, 464023600.00 ns, 154.6745 ms/op
+WorkloadPilot    3: 4 op, 606351300.00 ns, 151.5878 ms/op
+
+WorkloadWarmup   1: 4 op, 617642400.00 ns, 154.4106 ms/op
+WorkloadWarmup   2: 4 op, 610071600.00 ns, 152.5179 ms/op
+WorkloadWarmup   3: 4 op, 611922500.00 ns, 152.9806 ms/op
+WorkloadWarmup   4: 4 op, 609106600.00 ns, 152.2766 ms/op
+WorkloadWarmup   5: 4 op, 602001100.00 ns, 150.5003 ms/op
+WorkloadWarmup   6: 4 op, 609441100.00 ns, 152.3603 ms/op
+WorkloadWarmup   7: 4 op, 605588500.00 ns, 151.3971 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 4 op, 612880900.00 ns, 153.2202 ms/op
+WorkloadActual   2: 4 op, 620485500.00 ns, 155.1214 ms/op
+WorkloadActual   3: 4 op, 610748200.00 ns, 152.6870 ms/op
+WorkloadActual   4: 4 op, 603666000.00 ns, 150.9165 ms/op
+WorkloadActual   5: 4 op, 610203200.00 ns, 152.5508 ms/op
+WorkloadActual   6: 4 op, 598199700.00 ns, 149.5499 ms/op
+WorkloadActual   7: 4 op, 604017700.00 ns, 151.0044 ms/op
+WorkloadActual   8: 4 op, 594961600.00 ns, 148.7404 ms/op
+WorkloadActual   9: 4 op, 592040200.00 ns, 148.0101 ms/op
+WorkloadActual  10: 4 op, 592681400.00 ns, 148.1704 ms/op
+WorkloadActual  11: 4 op, 595754200.00 ns, 148.9385 ms/op
+WorkloadActual  12: 4 op, 601577000.00 ns, 150.3942 ms/op
+WorkloadActual  13: 4 op, 587522800.00 ns, 146.8807 ms/op
+WorkloadActual  14: 4 op, 591517800.00 ns, 147.8794 ms/op
+WorkloadActual  15: 4 op, 588731300.00 ns, 147.1828 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 612880900.00 ns, 153.2202 ms/op
+WorkloadResult   2: 4 op, 620485500.00 ns, 155.1214 ms/op
+WorkloadResult   3: 4 op, 610748200.00 ns, 152.6870 ms/op
+WorkloadResult   4: 4 op, 603666000.00 ns, 150.9165 ms/op
+WorkloadResult   5: 4 op, 610203200.00 ns, 152.5508 ms/op
+WorkloadResult   6: 4 op, 598199700.00 ns, 149.5499 ms/op
+WorkloadResult   7: 4 op, 604017700.00 ns, 151.0044 ms/op
+WorkloadResult   8: 4 op, 594961600.00 ns, 148.7404 ms/op
+WorkloadResult   9: 4 op, 592040200.00 ns, 148.0101 ms/op
+WorkloadResult  10: 4 op, 592681400.00 ns, 148.1704 ms/op
+WorkloadResult  11: 4 op, 595754200.00 ns, 148.9385 ms/op
+WorkloadResult  12: 4 op, 601577000.00 ns, 150.3942 ms/op
+WorkloadResult  13: 4 op, 587522800.00 ns, 146.8807 ms/op
+WorkloadResult  14: 4 op, 591517800.00 ns, 147.8794 ms/op
+WorkloadResult  15: 4 op, 588731300.00 ns, 147.1828 ms/op
+
+// AfterAll
+// Benchmark Process 2944 has exited with code 0
+
+Mean = 150.083 ms, StdErr = 0.635 ms (0.42%), N = 15, StdDev = 2.458 ms
+Min = 146.881 ms, Q1 = 148.090 ms, Median = 149.550 ms, Q3 = 151.778 ms, Max = 155.121 ms
+IQR = 3.687 ms, LowerFence = 142.559 ms, UpperFence = 157.309 ms
+ConfidenceInterval = [147.455 ms; 152.711 ms] (CI 99.9%), Margin = 2.628 ms (1.75% of Mean)
+Skewness = 0.47, Kurtosis = 1.94, MValue = 2
+
+// **************************
+// Benchmark: ImageResize.ResizeSystemDrawing: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d6361c7f-f8af-44ff-a7c1-87e27e4c7016.dll" --benchmarkName "ImageResizeBenchmark.ImageResize.ResizeSystemDrawing(fileNameIn: "C:\Work\jpgIn.jpg", fileNameOut: "C:\Work\jpgOut.jpg", width: 1000, height: 1000)" --job "Default" --benchmarkId 8 in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\d6361c7f-f8af-44ff-a7c1-87e27e4c7016\bin\Release\net5.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 316200.00 ns, 316.2000 us/op
+WorkloadJitting  1: 1 op, 146767400.00 ns, 146.7674 ms/op
+
+WorkloadPilot    1: 2 op, 233251200.00 ns, 116.6256 ms/op
+WorkloadPilot    2: 3 op, 358365100.00 ns, 119.4550 ms/op
+WorkloadPilot    3: 4 op, 483798200.00 ns, 120.9496 ms/op
+WorkloadPilot    4: 5 op, 599120900.00 ns, 119.8242 ms/op
+
+WorkloadWarmup   1: 5 op, 596617900.00 ns, 119.3236 ms/op
+WorkloadWarmup   2: 5 op, 601006900.00 ns, 120.2014 ms/op
+WorkloadWarmup   3: 5 op, 598107200.00 ns, 119.6214 ms/op
+WorkloadWarmup   4: 5 op, 608909500.00 ns, 121.7819 ms/op
+WorkloadWarmup   5: 5 op, 602033800.00 ns, 120.4068 ms/op
+WorkloadWarmup   6: 5 op, 590477400.00 ns, 118.0955 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 604824100.00 ns, 120.9648 ms/op
+WorkloadActual   2: 5 op, 592023700.00 ns, 118.4047 ms/op
+WorkloadActual   3: 5 op, 593197100.00 ns, 118.6394 ms/op
+WorkloadActual   4: 5 op, 629039200.00 ns, 125.8078 ms/op
+WorkloadActual   5: 5 op, 596584100.00 ns, 119.3168 ms/op
+WorkloadActual   6: 5 op, 601995100.00 ns, 120.3990 ms/op
+WorkloadActual   7: 5 op, 596253000.00 ns, 119.2506 ms/op
+WorkloadActual   8: 5 op, 603536600.00 ns, 120.7073 ms/op
+WorkloadActual   9: 5 op, 601694400.00 ns, 120.3389 ms/op
+WorkloadActual  10: 5 op, 597505700.00 ns, 119.5011 ms/op
+WorkloadActual  11: 5 op, 593224400.00 ns, 118.6449 ms/op
+WorkloadActual  12: 5 op, 601836800.00 ns, 120.3674 ms/op
+WorkloadActual  13: 5 op, 608489300.00 ns, 121.6979 ms/op
+WorkloadActual  14: 5 op, 604059400.00 ns, 120.8119 ms/op
+WorkloadActual  15: 5 op, 598591900.00 ns, 119.7184 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 604824100.00 ns, 120.9648 ms/op
+WorkloadResult   2: 5 op, 592023700.00 ns, 118.4047 ms/op
+WorkloadResult   3: 5 op, 593197100.00 ns, 118.6394 ms/op
+WorkloadResult   4: 5 op, 596584100.00 ns, 119.3168 ms/op
+WorkloadResult   5: 5 op, 601995100.00 ns, 120.3990 ms/op
+WorkloadResult   6: 5 op, 596253000.00 ns, 119.2506 ms/op
+WorkloadResult   7: 5 op, 603536600.00 ns, 120.7073 ms/op
+WorkloadResult   8: 5 op, 601694400.00 ns, 120.3389 ms/op
+WorkloadResult   9: 5 op, 597505700.00 ns, 119.5011 ms/op
+WorkloadResult  10: 5 op, 593224400.00 ns, 118.6449 ms/op
+WorkloadResult  11: 5 op, 601836800.00 ns, 120.3674 ms/op
+WorkloadResult  12: 5 op, 608489300.00 ns, 121.6979 ms/op
+WorkloadResult  13: 5 op, 604059400.00 ns, 120.8119 ms/op
+WorkloadResult  14: 5 op, 598591900.00 ns, 119.7184 ms/op
+
+// AfterAll
+// Benchmark Process 11352 has exited with code 0
+
+Mean = 119.912 ms, StdErr = 0.266 ms (0.22%), N = 14, StdDev = 0.995 ms
+Min = 118.405 ms, Q1 = 119.267 ms, Median = 120.029 ms, Q3 = 120.630 ms, Max = 121.698 ms
+IQR = 1.363 ms, LowerFence = 117.223 ms, UpperFence = 122.675 ms
+ConfidenceInterval = [118.790 ms; 121.034 ms] (CI 99.9%), Margin = 1.122 ms (0.94% of Mean)
+Skewness = 0.02, Kurtosis = 1.7, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\ImageResizeBenchmark.ImageResize-report.csv
+  BenchmarkDotNet.Artifacts\results\ImageResizeBenchmark.ImageResize-report-github.md
+  BenchmarkDotNet.Artifacts\results\ImageResizeBenchmark.ImageResize-report.html
+
+// * Detailed results *
+ImageResize.ResizeNetVipsQuant7: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 37.696 ms, StdErr = 0.183 ms (0.49%), N = 16, StdDev = 0.732 ms
+Min = 36.078 ms, Q1 = 37.389 ms, Median = 37.704 ms, Q3 = 38.199 ms, Max = 38.828 ms
+IQR = 0.810 ms, LowerFence = 36.173 ms, UpperFence = 39.414 ms
+ConfidenceInterval = [36.950 ms; 38.441 ms] (CI 99.9%), Margin = 0.746 ms (1.98% of Mean)
+Skewness = -0.39, Kurtosis = 2.46, MValue = 2
+-------------------- Histogram --------------------
+[35.697 ms ; 36.466 ms) | @
+[36.466 ms ; 37.952 ms) | @@@@@@@@@@
+[37.952 ms ; 38.877 ms) | @@@@@
+---------------------------------------------------
+
+ImageResize.ResizeNetVipsQ90: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 37.617 ms, StdErr = 0.125 ms (0.33%), N = 14, StdDev = 0.468 ms
+Min = 36.968 ms, Q1 = 37.284 ms, Median = 37.494 ms, Q3 = 37.876 ms, Max = 38.515 ms
+IQR = 0.591 ms, LowerFence = 36.397 ms, UpperFence = 38.763 ms
+ConfidenceInterval = [37.088 ms; 38.145 ms] (CI 99.9%), Margin = 0.528 ms (1.40% of Mean)
+Skewness = 0.69, Kurtosis = 2.3, MValue = 2
+-------------------- Histogram --------------------
+[36.713 ms ; 37.773 ms) | @@@@@@@@@
+[37.773 ms ; 38.770 ms) | @@@@@
+---------------------------------------------------
+
+ImageResize.ResizeSystemDrawing: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 55.307 ms, StdErr = 0.199 ms (0.36%), N = 15, StdDev = 0.772 ms
+Min = 54.136 ms, Q1 = 54.683 ms, Median = 55.567 ms, Q3 = 55.903 ms, Max = 56.374 ms
+IQR = 1.220 ms, LowerFence = 52.853 ms, UpperFence = 57.733 ms
+ConfidenceInterval = [54.482 ms; 56.133 ms] (CI 99.9%), Margin = 0.825 ms (1.49% of Mean)
+Skewness = -0.26, Kurtosis = 1.42, MValue = 2
+-------------------- Histogram --------------------
+[53.931 ms ; 56.530 ms) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+ImageResize.ResizeNetVipsQuant7: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 73.924 ms, StdErr = 0.189 ms (0.26%), N = 14, StdDev = 0.708 ms
+Min = 73.285 ms, Q1 = 73.507 ms, Median = 73.609 ms, Q3 = 73.871 ms, Max = 75.378 ms
+IQR = 0.364 ms, LowerFence = 72.960 ms, UpperFence = 74.418 ms
+ConfidenceInterval = [73.124 ms; 74.723 ms] (CI 99.9%), Margin = 0.799 ms (1.08% of Mean)
+Skewness = 1.17, Kurtosis = 2.63, MValue = 2
+-------------------- Histogram --------------------
+[72.899 ms ; 75.764 ms) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+ImageResize.ResizeNetVipsQ90: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 96.719 ms, StdErr = 0.464 ms (0.48%), N = 17, StdDev = 1.915 ms
+Min = 94.611 ms, Q1 = 94.988 ms, Median = 96.800 ms, Q3 = 97.661 ms, Max = 100.978 ms
+IQR = 2.672 ms, LowerFence = 90.980 ms, UpperFence = 101.669 ms
+ConfidenceInterval = [94.855 ms; 98.584 ms] (CI 99.9%), Margin = 1.865 ms (1.93% of Mean)
+Skewness = 0.5, Kurtosis = 2.13, MValue = 2
+-------------------- Histogram --------------------
+[94.485 ms ;  97.215 ms) | @@@@@@@@@
+[97.215 ms ; 101.955 ms) | @@@@@@@@
+---------------------------------------------------
+
+ImageResize.ResizeSystemDrawing: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 84.383 ms, StdErr = 0.262 ms (0.31%), N = 14, StdDev = 0.979 ms
+Min = 83.261 ms, Q1 = 83.560 ms, Median = 84.181 ms, Q3 = 84.718 ms, Max = 86.674 ms
+IQR = 1.158 ms, LowerFence = 81.823 ms, UpperFence = 86.454 ms
+ConfidenceInterval = [83.278 ms; 85.487 ms] (CI 99.9%), Margin = 1.105 ms (1.31% of Mean)
+Skewness = 0.83, Kurtosis = 2.72, MValue = 2
+-------------------- Histogram --------------------
+[83.089 ms ; 87.208 ms) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+ImageResize.ResizeNetVipsQuant7: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 110.788 ms, StdErr = 0.543 ms (0.49%), N = 16, StdDev = 2.172 ms
+Min = 108.754 ms, Q1 = 108.971 ms, Median = 110.194 ms, Q3 = 111.540 ms, Max = 114.988 ms
+IQR = 2.569 ms, LowerFence = 105.118 ms, UpperFence = 115.393 ms
+ConfidenceInterval = [108.577 ms; 112.999 ms] (CI 99.9%), Margin = 2.211 ms (2.00% of Mean)
+Skewness = 0.78, Kurtosis = 2.12, MValue = 2
+-------------------- Histogram --------------------
+[108.628 ms ; 110.891 ms) | @@@@@@@@@
+[110.891 ms ; 113.417 ms) | @@@@
+[113.417 ms ; 116.119 ms) | @@@
+---------------------------------------------------
+
+ImageResize.ResizeNetVipsQ90: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 150.083 ms, StdErr = 0.635 ms (0.42%), N = 15, StdDev = 2.458 ms
+Min = 146.881 ms, Q1 = 148.090 ms, Median = 149.550 ms, Q3 = 151.778 ms, Max = 155.121 ms
+IQR = 3.687 ms, LowerFence = 142.559 ms, UpperFence = 157.309 ms
+ConfidenceInterval = [147.455 ms; 152.711 ms] (CI 99.9%), Margin = 2.628 ms (1.75% of Mean)
+Skewness = 0.47, Kurtosis = 1.94, MValue = 2
+-------------------- Histogram --------------------
+[146.431 ms ; 150.025 ms) | @@@@@@@@
+[150.025 ms ; 155.713 ms) | @@@@@@@
+---------------------------------------------------
+
+ImageResize.ResizeSystemDrawing: DefaultJob [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 119.912 ms, StdErr = 0.266 ms (0.22%), N = 14, StdDev = 0.995 ms
+Min = 118.405 ms, Q1 = 119.267 ms, Median = 120.029 ms, Q3 = 120.630 ms, Max = 121.698 ms
+IQR = 1.363 ms, LowerFence = 117.223 ms, UpperFence = 122.675 ms
+ConfidenceInterval = [118.790 ms; 121.034 ms] (CI 99.9%), Margin = 1.122 ms (0.94% of Mean)
+Skewness = 0.02, Kurtosis = 1.7, MValue = 2
+-------------------- Histogram --------------------
+[117.863 ms ; 121.858 ms) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19041.1110 (2004/May2020Update/20H1)
+Intel Core i5-4570 CPU 3.20GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
+.NET SDK=6.0.100-preview.5.21302.13
+  [Host]     : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+  DefaultJob : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+
+
+|              Method |        fileNameIn |        fileNameOut | width | height |      Mean |    Error |   StdDev |
+|-------------------- |------------------ |------------------- |------ |------- |----------:|---------:|---------:|
+| ResizeNetVipsQuant7 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   300 |    300 |  37.70 ms | 0.746 ms | 0.732 ms |
+|    ResizeNetVipsQ90 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   300 |    300 |  37.62 ms | 0.528 ms | 0.468 ms |
+| ResizeSystemDrawing | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   300 |    300 |  55.31 ms | 0.825 ms | 0.772 ms |
+| ResizeNetVipsQuant7 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   700 |    700 |  73.92 ms | 0.799 ms | 0.708 ms |
+|    ResizeNetVipsQ90 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   700 |    700 |  96.72 ms | 1.865 ms | 1.915 ms |
+| ResizeSystemDrawing | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   700 |    700 |  84.38 ms | 1.105 ms | 0.979 ms |
+| ResizeNetVipsQuant7 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |  1000 |   1000 | 110.79 ms | 2.211 ms | 2.172 ms |
+|    ResizeNetVipsQ90 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |  1000 |   1000 | 150.08 ms | 2.628 ms | 2.458 ms |
+| ResizeSystemDrawing | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |  1000 |   1000 | 119.91 ms | 1.122 ms | 0.995 ms |
+
+// * Warnings *
+MinIterationTime
+  ImageResize.ResizeNetVipsQuant7: Default -> The minimum observed iteration time is 36.0784 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+
+// * Hints *
+Outliers
+  ImageResize.ResizeNetVipsQuant7: Default -> 1 outlier  was  detected (36.08 ms)
+  ImageResize.ResizeNetVipsQ90: Default    -> 1 outlier  was  removed (40.29 ms)
+  ImageResize.ResizeNetVipsQuant7: Default -> 1 outlier  was  removed (75.77 ms)
+  ImageResize.ResizeSystemDrawing: Default -> 1 outlier  was  removed (87.17 ms)
+  ImageResize.ResizeNetVipsQuant7: Default -> 1 outlier  was  removed (116.01 ms)
+  ImageResize.ResizeSystemDrawing: Default -> 1 outlier  was  removed (125.81 ms)
+
+// * Legends *
+  fileNameIn  : Value of the 'fileNameIn' parameter
+  fileNameOut : Value of the 'fileNameOut' parameter
+  width       : Value of the 'width' parameter
+  height      : Value of the 'height' parameter
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  StdDev      : Standard deviation of all measurements
+  1 ms        : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:02:00 (120.08 sec), executed benchmarks: 9
+
+Global total time: 00:02:16 (136.24 sec), executed benchmarks: 9
+// * Artifacts cleanup *

@@ -1,0 +1,65 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 6 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\ffd9617f-1542-4d19-be02-da9d772a0d45
+// command took 4,67s and exited with 1
+// ***** Done, took 00:00:05 (5.05 sec)   *****
+// Found 6 benchmarks:
+//   ImageResize.ResizeNetVipsQuant7: .NET Framework 4.6.1(Runtime=.NET Framework 4.6.1) [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+//   ImageResize.ResizeNetVipsQ90: .NET Framework 4.6.1(Runtime=.NET Framework 4.6.1) [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+//   ImageResize.ResizeNetVipsQuant7: .NET Framework 4.6.1(Runtime=.NET Framework 4.6.1) [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+//   ImageResize.ResizeNetVipsQ90: .NET Framework 4.6.1(Runtime=.NET Framework 4.6.1) [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=700, height=700]
+//   ImageResize.ResizeNetVipsQuant7: .NET Framework 4.6.1(Runtime=.NET Framework 4.6.1) [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+//   ImageResize.ResizeNetVipsQ90: .NET Framework 4.6.1(Runtime=.NET Framework 4.6.1) [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=1000, height=1000]
+
+// Build Error: The project which defines benchmarks does not target 'net461'.
+You need to add 'net461' to <TargetFrameworks> in your project file ('ImageResizeBenchmark').
+Example: <TargetFrameworks>net5.0;net461</TargetFrameworks>
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in C:\Users\lordo\Source\Repos\ImageResizeBenchmark\bin\Release\net5.0\ffd9617f-1542-4d19-be02-da9d772a0d45
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\ImageResizeBenchmark.ImageResize-report.csv
+  BenchmarkDotNet.Artifacts\results\ImageResizeBenchmark.ImageResize-report-github.md
+  BenchmarkDotNet.Artifacts\results\ImageResizeBenchmark.ImageResize-report.html
+
+// * Detailed results *
+ImageResize.ResizeNetVipsQuant7: .NET Framework 4.6.1(Runtime=.NET Framework 4.6.1) [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+Runtime = ; GC = 
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19041.1110 (2004/May2020Update/20H1)
+Intel Core i5-4570 CPU 3.20GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
+.NET SDK=6.0.100-preview.5.21302.13
+  [Host] : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+
+Job=.NET Framework 4.6.1  Runtime=.NET Framework 4.6.1  
+
+|              Method |        fileNameIn |        fileNameOut | width | height | Mean | Error |
+|-------------------- |------------------ |------------------- |------ |------- |-----:|------:|
+| ResizeNetVipsQuant7 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   300 |    300 |   NA |    NA |
+
+Benchmarks with issues:
+  ImageResize.ResizeNetVipsQuant7: .NET Framework 4.6.1(Runtime=.NET Framework 4.6.1) [fileNameIn=C:\Work\jpgIn.jpg, fileNameOut=C:\Work\jpgOut.jpg, width=300, height=300]
+
+// * Legends *
+  fileNameIn  : Value of the 'fileNameIn' parameter
+  fileNameOut : Value of the 'fileNameOut' parameter
+  width       : Value of the 'width' parameter
+  height      : Value of the 'height' parameter
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  1 ns        : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:00 (0.6 sec), executed benchmarks: 0
+
+Global total time: 00:00:05 (5.66 sec), executed benchmarks: 0
+// * Artifacts cleanup *
