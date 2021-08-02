@@ -13,11 +13,11 @@ namespace ImageResizeBenchmark
     [MemoryDiagnoser]
     public class ImageResize
     {
-        private const string FileNameInJpgPath = "C:\\Work\\jpgIn.jpg";
-        private const string FileNameOutJpgPath = "C:\\Work\\jpgOut.jpg";
+        private const string FileNameInJpgPath = "C:\\Work\\in.jpg";
+        private const string FileNameOutJpgPath = "C:\\Work\\out.jpg";
 
-        private const string FileNameInPngPath = "C:\\Work\\pngIn.png";
-        private const string FileNameOutPngPath = "C:\\Work\\pngOut.png";
+        private const string FileNameInPngPath = "C:\\Work\\in.png";
+        private const string FileNameOutPngPath = "C:\\Work\\out.png";
         
 
         [IterationSetup]
