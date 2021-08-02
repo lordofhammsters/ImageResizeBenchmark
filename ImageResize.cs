@@ -10,20 +10,24 @@ using NetVips;
 namespace ImageResizeBenchmark
 {
     //[SimpleJob(RuntimeMoniker.Net461)]
+    [MemoryDiagnoser]
     public class ImageResize
     {
         private const string FileNameInJpgPath = "C:\\Work\\jpgIn.jpg";
         private const string FileNameOutJpgPath = "C:\\Work\\jpgOut.jpg";
 
-        public ImageResize()
-        {
-        }
+        private const string FileNameInPngPath = "C:\\Work\\pngIn.png";
+        private const string FileNameOutPngPath = "C:\\Work\\pngOut.png";
+        
 
         [IterationSetup]
         private void CleanUp()
         {
             File.Delete(FileNameOutJpgPath);
+            File.Delete(FileNameOutPngPath);
         }
+        
+        #region Jpeg
 
         [Benchmark]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 300, 300)]
@@ -45,16 +49,17 @@ namespace ImageResizeBenchmark
                 image.WriteToFile(fileNameOut, options);
             }
         }
+        
 
         [Benchmark]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 300, 300)]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 700, 700)]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 1000, 1000)]
-        public void ResizeNetVipsQ90(string fileNameIn, string fileNameOut, int width, int height)
+        public void ResizeNetVipsQ85(string fileNameIn, string fileNameOut, int width, int height)
         {
             var options = new VOption()
             {
-                {"Q", 90}, {"optimize_coding", true}, {"strip", true}, {"interlace", true},
+                {"Q", 85}, {"optimize_coding", true}, {"strip", true}, {"interlace", true},
                 {"trellis_quant", true},
                 {"overshoot_deringing", true},
                 {"optimize_scans", true}
@@ -66,11 +71,35 @@ namespace ImageResizeBenchmark
             }
         }
 
+        #endregion
+        
+        #region PNG
+
+        [Benchmark]
+        [Arguments(FileNameInPngPath, FileNameOutPngPath, 300, 300)]
+        [Arguments(FileNameInPngPath, FileNameOutPngPath, 700, 700)]
+        [Arguments(FileNameInPngPath, FileNameOutPngPath, 1000, 1000)]
+        public void ResizeNetVips(string fileNameIn, string fileNameOut, int width, int height)
+        {
+            var options = new VOption() {{"Q", 90}};
+
+            using (var image = NetVips.Image.Thumbnail(fileNameIn, width, height))
+            {
+                image.WriteToFile(fileNameOut, options);
+            }
+        }
+
+        #endregion
+
+
 
         [Benchmark]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 300, 300)]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 700, 700)]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 1000, 1000)]
+        [Arguments(FileNameInPngPath, FileNameOutPngPath, 300, 300)]
+        [Arguments(FileNameInPngPath, FileNameOutPngPath, 700, 700)]
+        [Arguments(FileNameInPngPath, FileNameOutPngPath, 1000, 1000)]
         public void ResizeSystemDrawing(string fileNameIn, string fileNameOut, int width, int height)
         {
             using (var image = System.Drawing.Image.FromFile(fileNameIn))

@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>ImageResizeBenchmark.ImageResize-20210802-005617</title>
+<title>ImageResizeBenchmark.ImageResize-20210802-194821</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,17 +22,23 @@ Intel Core i5-4570 CPU 3.20GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>       Method</th><th> fileNameIn</th><th> fileNameOut</th><th>width</th><th>height</th><th>Mean</th><th>Error</th><th>StdDev</th>
+<thead><tr><th>       Method</th><th> fileNameIn</th><th> fileNameOut</th><th>width</th><th>height</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>ResizeNetVipsQuant7</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>300</td><td>300</td><td>37.70 ms</td><td>0.746 ms</td><td>0.732 ms</td>
-</tr><tr><td>ResizeNetVipsQ90</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>300</td><td>300</td><td>37.62 ms</td><td>0.528 ms</td><td>0.468 ms</td>
-</tr><tr><td>ResizeSystemDrawing</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>300</td><td>300</td><td>55.31 ms</td><td>0.825 ms</td><td>0.772 ms</td>
-</tr><tr><td>ResizeNetVipsQuant7</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>700</td><td>700</td><td>73.92 ms</td><td>0.799 ms</td><td>0.708 ms</td>
-</tr><tr><td>ResizeNetVipsQ90</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>700</td><td>700</td><td>96.72 ms</td><td>1.865 ms</td><td>1.915 ms</td>
-</tr><tr><td>ResizeSystemDrawing</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>700</td><td>700</td><td>84.38 ms</td><td>1.105 ms</td><td>0.979 ms</td>
-</tr><tr><td>ResizeNetVipsQuant7</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>1000</td><td>1000</td><td>110.79 ms</td><td>2.211 ms</td><td>2.172 ms</td>
-</tr><tr><td>ResizeNetVipsQ90</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>1000</td><td>1000</td><td>150.08 ms</td><td>2.628 ms</td><td>2.458 ms</td>
-</tr><tr><td>ResizeSystemDrawing</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>1000</td><td>1000</td><td>119.91 ms</td><td>1.122 ms</td><td>0.995 ms</td>
+</thead><tbody><tr><td>ResizeNetVipsQuant7</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>300</td><td>300</td><td>48.30 ms</td><td>0.850 ms</td><td>0.795 ms</td><td>-</td><td>-</td><td>-</td><td>6 KB</td>
+</tr><tr><td>ResizeNetVipsQ85</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>300</td><td>300</td><td>45.08 ms</td><td>0.885 ms</td><td>1.297 ms</td><td>-</td><td>-</td><td>-</td><td>6 KB</td>
+</tr><tr><td>ResizeSystemDrawing</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>300</td><td>300</td><td>125.35 ms</td><td>2.489 ms</td><td>2.328 ms</td><td>-</td><td>-</td><td>-</td><td>4 KB</td>
+</tr><tr><td>ResizeNetVipsQuant7</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>700</td><td>700</td><td>102.17 ms</td><td>2.016 ms</td><td>1.886 ms</td><td>-</td><td>-</td><td>-</td><td>6 KB</td>
+</tr><tr><td>ResizeNetVipsQ85</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>700</td><td>700</td><td>89.14 ms</td><td>1.281 ms</td><td>1.136 ms</td><td>-</td><td>-</td><td>-</td><td>6 KB</td>
+</tr><tr><td>ResizeSystemDrawing</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>700</td><td>700</td><td>162.57 ms</td><td>3.114 ms</td><td>3.058 ms</td><td>-</td><td>-</td><td>-</td><td>4 KB</td>
+</tr><tr><td>ResizeNetVipsQuant7</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>1000</td><td>1000</td><td>183.95 ms</td><td>3.645 ms</td><td>4.198 ms</td><td>-</td><td>-</td><td>-</td><td>6 KB</td>
+</tr><tr><td>ResizeNetVipsQ85</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>1000</td><td>1000</td><td>157.36 ms</td><td>3.101 ms</td><td>5.008 ms</td><td>-</td><td>-</td><td>-</td><td>6 KB</td>
+</tr><tr><td>ResizeSystemDrawing</td><td>C:\Work\jpgIn.jpg</td><td>C:\Work\jpgOut.jpg</td><td>1000</td><td>1000</td><td>201.77 ms</td><td>3.975 ms</td><td>6.962 ms</td><td>-</td><td>-</td><td>-</td><td>4 KB</td>
+</tr><tr><td>ResizeNetVips</td><td>C:\Work\pngIn.png</td><td>C:\Work\pngOut.png</td><td>300</td><td>300</td><td>56.49 ms</td><td>1.081 ms</td><td>1.245 ms</td><td>-</td><td>-</td><td>-</td><td>4 KB</td>
+</tr><tr><td>ResizeSystemDrawing</td><td>C:\Work\pngIn.png</td><td>C:\Work\pngOut.png</td><td>300</td><td>300</td><td>78.72 ms</td><td>1.295 ms</td><td>1.386 ms</td><td>-</td><td>-</td><td>-</td><td>4 KB</td>
+</tr><tr><td>ResizeNetVips</td><td>C:\Work\pngIn.png</td><td>C:\Work\pngOut.png</td><td>700</td><td>700</td><td>57.77 ms</td><td>0.873 ms</td><td>0.817 ms</td><td>-</td><td>-</td><td>-</td><td>4 KB</td>
+</tr><tr><td>ResizeSystemDrawing</td><td>C:\Work\pngIn.png</td><td>C:\Work\pngOut.png</td><td>700</td><td>700</td><td>123.96 ms</td><td>2.422 ms</td><td>3.064 ms</td><td>-</td><td>-</td><td>-</td><td>4 KB</td>
+</tr><tr><td>ResizeNetVips</td><td>C:\Work\pngIn.png</td><td>C:\Work\pngOut.png</td><td>1000</td><td>1000</td><td>93.22 ms</td><td>0.627 ms</td><td>0.555 ms</td><td>-</td><td>-</td><td>-</td><td>4 KB</td>
+</tr><tr><td>ResizeSystemDrawing</td><td>C:\Work\pngIn.png</td><td>C:\Work\pngOut.png</td><td>1000</td><td>1000</td><td>169.70 ms</td><td>3.359 ms</td><td>3.869 ms</td><td>-</td><td>-</td><td>-</td><td>7 KB</td>
 </tr></tbody></table>
 </body>
 </html>
