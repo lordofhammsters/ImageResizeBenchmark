@@ -7,25 +7,25 @@ Intel Core i5-4570 CPU 3.20GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
   DefaultJob : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
 
 
-|              Method |        fileNameIn |        fileNameOut | width | height |      Mean |    Error |   StdDev | Gen 0 | Gen 1 | Gen 2 | Allocated |
-|-------------------- |------------------ |------------------- |------ |------- |----------:|---------:|---------:|------:|------:|------:|----------:|
-| ResizeNetVipsQuant7 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   300 |    300 |  48.30 ms | 0.850 ms | 0.795 ms |     - |     - |     - |      6 KB |
-|    ResizeNetVipsQ85 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   300 |    300 |  45.08 ms | 0.885 ms | 1.297 ms |     - |     - |     - |      6 KB |
-| ResizeSystemDrawing | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   300 |    300 | 125.35 ms | 2.489 ms | 2.328 ms |     - |     - |     - |      4 KB |
-
-| ResizeNetVipsQuant7 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   700 |    700 | 102.17 ms | 2.016 ms | 1.886 ms |     - |     - |     - |      6 KB |
-|    ResizeNetVipsQ85 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   700 |    700 |  89.14 ms | 1.281 ms | 1.136 ms |     - |     - |     - |      6 KB |
-| ResizeSystemDrawing | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |   700 |    700 | 162.57 ms | 3.114 ms | 3.058 ms |     - |     - |     - |      4 KB |
-
-| ResizeNetVipsQuant7 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |  1000 |   1000 | 183.95 ms | 3.645 ms | 4.198 ms |     - |     - |     - |      6 KB |
-|    ResizeNetVipsQ85 | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |  1000 |   1000 | 157.36 ms | 3.101 ms | 5.008 ms |     - |     - |     - |      6 KB |
-| ResizeSystemDrawing | C:\Work\jpgIn.jpg | C:\Work\jpgOut.jpg |  1000 |   1000 | 201.77 ms | 3.975 ms | 6.962 ms |     - |     - |     - |      4 KB |
-
-|       ResizeNetVips | C:\Work\pngIn.png | C:\Work\pngOut.png |   300 |    300 |  56.49 ms | 1.081 ms | 1.245 ms |     - |     - |     - |      4 KB |
-| ResizeSystemDrawing | C:\Work\pngIn.png | C:\Work\pngOut.png |   300 |    300 |  78.72 ms | 1.295 ms | 1.386 ms |     - |     - |     - |      4 KB |
-
-|       ResizeNetVips | C:\Work\pngIn.png | C:\Work\pngOut.png |   700 |    700 |  57.77 ms | 0.873 ms | 0.817 ms |     - |     - |     - |      4 KB |
-| ResizeSystemDrawing | C:\Work\pngIn.png | C:\Work\pngOut.png |   700 |    700 | 123.96 ms | 2.422 ms | 3.064 ms |     - |     - |     - |      4 KB |
-
-|       ResizeNetVips | C:\Work\pngIn.png | C:\Work\pngOut.png |  1000 |   1000 |  93.22 ms | 0.627 ms | 0.555 ms |     - |     - |     - |      4 KB |
-| ResizeSystemDrawing | C:\Work\pngIn.png | C:\Work\pngOut.png |  1000 |   1000 | 169.70 ms | 3.359 ms | 3.869 ms |     - |     - |     - |      7 KB |
+|              Method | fileNameIn | fileNameOut| width | height |      Mean | Allocated |
+|-------------------- |----------- |----------- |------ |------- |----------:|----------:|
+| ResizeNetVipsQuant7 |     in.jpg |    out.jpg |   300 |    300 |  48.30 ms |      6 KB |
+|    ResizeNetVipsQ85 |     in.jpg |    out.jpg |   300 |    300 |  45.08 ms |      6 KB |
+| ResizeSystemDrawing |     in.jpg |    out.jpg |   300 |    300 | 125.35 ms |      4 KB |
+|                     |            |            |       |        |           |          -|
+| ResizeNetVipsQuant7 |     in.jpg |    out.jpg |   700 |    700 | 102.17 ms |      6 KB |
+|    ResizeNetVipsQ85 |     in.jpg |    out.jpg |   700 |    700 |  89.14 ms |      6 KB |
+| ResizeSystemDrawing |     in.jpg |    out.jpg |   700 |    700 | 162.57 ms |      4 KB |
+|                     |            |            |       |        |           |          -|
+| ResizeNetVipsQuant7 |     in.jpg |    out.jpg |  1000 |   1000 | 183.95 ms |      6 KB |
+|    ResizeNetVipsQ85 |     in.jpg |    out.jpg |  1000 |   1000 | 157.36 ms |      6 KB |
+| ResizeSystemDrawing |     in.jpg |    out.jpg |  1000 |   1000 | 201.77 ms |      4 KB |
+|                     |            |            |       |        |           |          -|
+|       ResizeNetVips |     in.png |    out.png |   300 |    300 |  56.49 ms |      4 KB |
+| ResizeSystemDrawing |     in.png |    out.png |   300 |    300 |  78.72 ms |      4 KB |
+|                     |            |            |       |        |           |          -|
+|       ResizeNetVips |     in.png |    out.png |   700 |    700 |  57.77 ms |      4 KB |
+| ResizeSystemDrawing |     in.png |    out.png |   700 |    700 | 123.96 ms |      4 KB |
+|                     |            |            |       |        |           |          -|
+|       ResizeNetVips |     in.png |    out.png |  1000 |   1000 |  93.22 ms |      4 KB |
+| ResizeSystemDrawing |     in.png |    out.png |  1000 |   1000 | 169.70 ms |      7 KB |
