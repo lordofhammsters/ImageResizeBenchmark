@@ -9,6 +9,11 @@ using NetVips;
 
 namespace ImageResizeBenchmark
 {
+    // docs: jpg https://libvips.github.io/libvips/API/current/VipsForeignSave.html#vips-jpegsave
+    // docs: png https://libvips.github.io/libvips/API/current/VipsForeignSave.html#vips-pngsave
+    // docs: webp https://libvips.github.io/libvips/API/current/VipsForeignSave.html#vips-webpsave
+    // docs: sharp https://sharp.pixelplumbing.com/api-output#jpeg
+
     //[SimpleJob(RuntimeMoniker.Net461)]
     [MemoryDiagnoser]
     public class ImageResize
@@ -26,9 +31,9 @@ namespace ImageResizeBenchmark
             File.Delete(FileNameOutJpgPath);
             File.Delete(FileNameOutPngPath);
         }
-        
-        #region Jpeg
 
+        #region Jpeg
+        
         [Benchmark]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 300, 300)]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 700, 700)]
@@ -72,13 +77,27 @@ namespace ImageResizeBenchmark
         }
 
         #endregion
-        
+
         #region PNG
 
         [Benchmark]
         [Arguments(FileNameInPngPath, FileNameOutPngPath, 300, 300)]
         [Arguments(FileNameInPngPath, FileNameOutPngPath, 700, 700)]
         [Arguments(FileNameInPngPath, FileNameOutPngPath, 1000, 1000)]
+        public void ResizeNetVipsPng(string fileNameIn, string fileNameOut, int width, int height)
+        {
+            var options = new VOption() {{"Q", 90}, {"palette", true}};
+
+            using (var image = NetVips.Image.Thumbnail(fileNameIn, width, height))
+            {
+                image.WriteToFile(fileNameOut, options);
+            }
+        }
+
+        #endregion
+
+        #region Others
+
         public void ResizeNetVips(string fileNameIn, string fileNameOut, int width, int height)
         {
             var options = new VOption() {{"Q", 90}};
@@ -90,8 +109,7 @@ namespace ImageResizeBenchmark
         }
 
         #endregion
-
-
+        
 
         [Benchmark]
         [Arguments(FileNameInJpgPath, FileNameOutJpgPath, 300, 300)]

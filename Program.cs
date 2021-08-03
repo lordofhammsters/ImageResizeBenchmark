@@ -22,7 +22,7 @@ namespace ImageResizeBenchmark
                 var height = 700;
 
                 var pathIn = "C:\\Work\\in.jpg";
-                
+
                 resizer.ResizeSystemDrawing(pathIn, "C:\\Work\\outDrawing.jpg", width, height);
                 resizer.ResizeNetVipsQuant7(pathIn, "C:\\Work\\out7.jpg", width, height);
                 resizer.ResizeNetVipsQ85(pathIn, "C:\\Work\\out85.jpg", width, height);
@@ -32,6 +32,10 @@ namespace ImageResizeBenchmark
                 resizer.ResizeNetVips(pathIn, "C:\\Work\\outNetVips.png", width, height);
 
                 pathIn = "C:\\Work\\in.png";
+                resizer.ResizeNetVips(pathIn, "C:\\Work\\out.webp", width, height);
+
+
+                pathIn = "C:\\Work\\in.webp";
                 resizer.ResizeNetVips(pathIn, "C:\\Work\\out.webp", width, height);
 
             }
